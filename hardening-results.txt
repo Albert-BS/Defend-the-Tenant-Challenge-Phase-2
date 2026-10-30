@@ -1,0 +1,88 @@
+
+Microsoft 365 live recommendation status
+Tenant: 11d9f301-f306-41bd-b41e-cb76abc57667 | Checked at: 2026-10-30 11:26:15Z
+MFA results check enabled configuration; complete coverage and registration are advisory.
+Registration data can lag by up to 36 hours. UNKNOWN means not verified, not necessarily unconfigured.
+
+
+Number Status      Recommendation                                                                     Evidence
+------ ------      --------------                                                                     --------
+     1 IMPLEMENTED Ensure multifactor authentication is enabled for all users in administrative roles Enabled MFA policy found: 'Require multifactor authentication
+                                                                                                      for admins' (ID: fb53b41b-8cc9-4102-a191-da3e63696d54, state:
+                                                                                                      enabled); 'Require multifactor authentication for all users'
+                                                                                                      (ID: bc653259-75d9-490d-96b9-a1f8ef6fb2fc, state: enabled);
+                                                                                                      'MFA for elevated sign-in risk' (ID:
+                                                                                                      f245857a-e516-4f92-b210-3262f9cf47fd, state: enabled);
+                                                                                                      'Remediation for high user risk' (ID:
+                                                                                                      8cc50720-767a-40e2-9230-512ce4ac97d7, state: enabled). This
+                                                                                                      checks configuration, not every account or sign-in. Coverage
+                                                                                                      advisory: administrator role coverage could not be evaluated.
+                                                                                                      An assigned role could not be resolved to a built-in template.
+                                                                                                      Exclusion advisory: 'Require multifactor authentication for
+                                                                                                      all users': excluded
+                                                                                                      users=[bfad5938-5b2a-4025-9bf7-1af35d2ba884]; groups=[];
+                                                                                                      roles=[d29b2b05-8046-44ba-8758-1e26182fcf32];
+                                                                                                      guests/external=False; approved=False. Exclusions do not
+                                                                                                      change the enabled-policy result. Registration advisory: 3 of
+                                                                                                      4 checked enabled accounts are not reported MFA-capable and 0
+                                                                                                      have missing data. Registration data can lag by up to 36 hours
+                                                                                                      and does not determine the enabled-policy result.
+     2 IMPLEMENTED Ensure multifactor authentication is enabled for all users                         Enabled MFA policy found: 'Require multifactor authentication
+                                                                                                      for all users' (ID: bc653259-75d9-490d-96b9-a1f8ef6fb2fc,
+                                                                                                      state: enabled); 'MFA for elevated sign-in risk' (ID:
+                                                                                                      f245857a-e516-4f92-b210-3262f9cf47fd, state: enabled);
+                                                                                                      'Remediation for high user risk' (ID:
+                                                                                                      8cc50720-767a-40e2-9230-512ce4ac97d7, state: enabled). This
+                                                                                                      checks configuration, not every account or sign-in. Coverage
+                                                                                                      advisory: broad protection was NOT verified. Review role
+                                                                                                      coverage, resource/client/risk conditions, and unapproved
+                                                                                                      exclusions. Exclusion advisory: 'Require multifactor
+                                                                                                      authentication for all users': excluded
+                                                                                                      users=[bfad5938-5b2a-4025-9bf7-1af35d2ba884]; groups=[];
+                                                                                                      roles=[d29b2b05-8046-44ba-8758-1e26182fcf32];
+                                                                                                      guests/external=False; approved=False. Exclusions do not
+                                                                                                      change the enabled-policy result. Registration advisory: 9 of
+                                                                                                      10 checked enabled accounts are not reported MFA-capable and 0
+                                                                                                      have missing data. Registration data can lag by up to 36 hours
+                                                                                                      and does not determine the enabled-policy result.
+     3 UNKNOWN     Enable Conditional Access policies to block legacy authentication                  Block policies exist, but coverage of both legacy client
+                                                                                                      types, all users/resources, and only approved exclusions was
+                                                                                                      not verified.
+     4 IMPLEMENTED Enable Microsoft Entra ID Identity Protection sign-in risk policies                Enabled sign-in risk MFA policy found: 'MFA for elevated
+                                                                                                      sign-in risk' (ID: f245857a-e516-4f92-b210-3262f9cf47fd,
+                                                                                                      state: enabled). Matching requires All users, medium and high
+                                                                                                      sign-in risk, MFA, and every-time primary-and-secondary
+                                                                                                      reauthentication. Security Defaults alone does not satisfy
+                                                                                                      this check. This checks configuration, not every account or
+                                                                                                      sign-in. Coverage advisory: broad sign-in risk MFA protection
+                                                                                                      with only approved exclusions was verified. Exclusion
+                                                                                                      advisory: no exclusions found on matching enabled Conditional
+                                                                                                      Access policies.
+     5 IMPLEMENTED Enable Microsoft Entra ID Identity Protection user risk policies                   Enabled user risk remediation policy found: 'Remediation for
+                                                                                                      high user risk' (ID: 8cc50720-767a-40e2-9230-512ce4ac97d7,
+                                                                                                      state: enabled). Matching requires All users, high user risk,
+                                                                                                      MFA AND exactly one remediation control (passwordChange or
+                                                                                                      riskRemediation), and every-time primary-and-secondary
+                                                                                                      reauthentication. Modern riskRemediation requires an MFA
+                                                                                                      authentication strength. Security Defaults alone does not
+                                                                                                      satisfy this check. This checks configuration, not every
+                                                                                                      account or sign-in. Coverage advisory: broad user risk
+                                                                                                      remediation protection with only approved exclusions was
+                                                                                                      verified. Exclusion advisory: no exclusions found on matching
+                                                                                                      enabled Conditional Access policies.
+     6 IMPLEMENTED Ensure user consent to apps accessing company data on their behalf is not allowed  No default-user self-consent policy is assigned. Existing
+                                                                                                      consent grants are not revoked by this setting.
+     7 IMPLEMENTED Only invited users should be automatically admitted to Teams meetings              Global: AutoAdmittedUsers is 'InvitedUsers'.
+     8 IMPLEMENTED Configure which users are allowed to present in Teams meetings                     Global: DesignatedPresenterRoleMode is
+                                                                                                      'OrganizerOnlyUserOverride'.
+     9 IMPLEMENTED Restrict anonymous users from joining meetings                                     Global: AllowAnonymousUsersToJoinMeeting is 'False'.
+    10 IMPLEMENTED Ensure 'Self service password reset enabled' is set to 'All'                       Password reset > Properties = All is recorded as
+                                                                                                      operator-confirmed by the script default. Registration note: 1
+                                                                                                      of 10 enabled member accounts are reported SSPR-registered; 9
+                                                                                                      are not registered and 0 have missing registration data. 1 are
+                                                                                                      reported SSPR-capable; 9 are not capable and 0 have missing
+                                                                                                      capability data. Registration data can lag by up to 36 hours.
+
+
+Summary: 9 implemented, 0 not configured, 1 unknown (10 recommendations).
+Snapshot: C:\SecureM365Snapshots\11d9f301-f306-41bd-b41e-cb76abc57667-m365-recommendation-status-20261030-112615213Z.json
